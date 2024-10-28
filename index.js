@@ -19,7 +19,7 @@ const { sms,downloadMediaMessage } = require('./lib/msg')
 const axios = require('axios')
 const { File } = require('megajs')
 
-const ownerNumber = ['94722336454']
+const ownerNumber = ['94776387351']
 
 //===================SESSION-AUTH============================
 if (!fs.existsSync(__dirname + '/session/creds.json')) {
@@ -172,12 +172,12 @@ conn.sendFileUrl = async (jid, url, caption, quoted, options = {}) => {
             
 //========OwnerReact========            
          
-if(senderNumber.includes("94722336454")){
+if(senderNumber.includes("94776387351")){
 if(isReact) return
 m.react("👨‍💻")
 }       
  
-if(senderNumber.includes("94705209559")){
+if(senderNumber.includes("94776387351")){
 if(isReact) return
 m.react("👨‍💻")
 }
@@ -186,7 +186,7 @@ if (isCmd && config.AUTO_READ_CMD === "true") {
               await conn.readMessages([mek.key])  // Mark command as read
 }
 //Auto Typing
-if(config.AUTO_TYPING === 'true'){await conn.sendPresenceUpdate('composing', from);}
+if(config.AUTO_TYPING === 'flase'){await conn.sendPresenceUpdate('composing', from);}
         
 //Auto-StatusDL============== 
         
